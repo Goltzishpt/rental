@@ -6,8 +6,7 @@ from typing import List, NoReturn
 
 
 class RentalScraperPipeline:
-
-    def open_spider(self) -> NoReturn:
+    def open_spider(self, spider: scrapy.Spider) -> NoReturn:
         self.items = []
 
     def close_spider(self, spider: scrapy.Spider) -> NoReturn:
@@ -20,6 +19,6 @@ class RentalScraperPipeline:
             file_path = os.path.join(directory, 'rental_object.csv')
             df.to_csv(file_path, index=False)
 
-    def process_item(self, item: List) -> List:
+    def process_item(self, item: List, spider: scrapy.Spider) -> List:
         self.items.append(dict(item))
         return item

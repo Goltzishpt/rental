@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 python3.11 -m venv venv
 echo 'Virtual environment is ready!'
