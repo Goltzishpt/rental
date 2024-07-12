@@ -1,0 +1,5 @@
+scrapy==2.11.2
+playwright==1.45.0
+scrapy_playwright==0.0.39
+pandas==2.2.2
+python-dotenv==0.19.2
